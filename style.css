@@ -1,6 +1,6 @@
 body{
     background-color: #251B37;
-    padding: 15%;
+    padding: 5%;
     box-sizing: border-box;
     font-size: 20px;
 }
@@ -9,7 +9,7 @@ h1{
 }
 .container{
     color: white;
-    width: 80%;
+    min-width: 80%;
     margin: auto;
     /* text-align: center; */
     border-radius: 15px;
