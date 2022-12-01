@@ -62,6 +62,9 @@ input{
 a{
     color: white;
     float: right;
+    text-decoration: none;
+    pointer-events: none;
+    border: 2px solid white;
 }
 
 label{

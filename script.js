@@ -5,6 +5,9 @@ const list = document.querySelector('.items');
 
 
 form.addEventListener('submit',onsubmit);
+list.addEventListener('click',(e)=>{
+    e.target.nodeName === 'LI' && e.target.remove();
+})
 function onsubmit(e){
     e.preventDefault();
     if(name.value == '' || task.value ==''){
@@ -25,18 +28,18 @@ function onsubmit(e){
         //         document.createTextNode(`${task.value}`)
         //     )
         // );
-        li.innerHTML=(`<h3>${name.value}</h3><p>${task.value}</p>`);
+        li.innerHTML=(`<a href = "#" class="del">X</a><h3>${name.value}</h3><p>${task.value}</p>`);
         li.classList.add('item')
         list.append(li);
         name.value = '';
         task.value = '';
     }
 }
-if(document.querySelector(".del") !== null){
-const close = document.querySelector('.del');
-close.addEventListener("click",deleteTask);
-function deleteTask(e){
-    const i = document.querySelector("li:first-child");
-    i.parentElement.removeChild(i);
-}
-}
+// if(document.querySelector(".del") !== null){
+// const close = document.querySelector('.del');
+// close.addEventListener("click",deleteTask);
+// function deleteTask(e){
+//     const i = document.querySelector("li:first-child");
+//     i.parentElement.removeChild(i);
+// }
+// }
